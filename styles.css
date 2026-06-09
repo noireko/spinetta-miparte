@@ -1,0 +1,3806 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos HEADER HOME para mobile*/
+.nav-links-home {
+  display: none;
+  flex-direction: column;
+  width: 100vw;
+  background: rgba(31, 31, 31, 0.5);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links-home.nav-active {
+  display: flex;
+}
+
+.nav-links-home li a,
+.nav-links-home li .dropbtn {
+  color: #fff;
+  background: rgba(31, 31, 31, 0.5);
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #3d2a22;
+  cursor: pointer;
+}
+
+.dropdown-content-home {
+  display: none;
+  flex-direction: column;
+  background: #3d2a22;
+  padding: 0;
+  margin: 0;
+  position: static;
+  background: rgba(31, 31, 31, 0.5);
+}
+
+.dropdown-content-home.show-dropdown {
+  display: flex;
+}
+
+.dropdown-content-home li a {
+  color: #fff;
+  background: rgba(31, 31, 31, 0.5);
+  padding: 0.9rem 2rem;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #4e362a;
+}
+
+.nav-links-home a:hover,
+.dropdown-content-home a:hover {
+  background: rgba(214, 214, 214, 0.25);
+  color: #2c1a16;
+}
+
+.nav-links-home,
+.dropdown-content-home {
+  list-style: none;
+}
+
+.navbar-home {
+  position: relative;
+  z-index: 1100;
+}
+
+.navbar-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-links-home {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links-home ul {
+  list-style-type: none;
+}
+
+.nav-links-home li {
+  width: 100%;
+  font-weight: bold;
+}
+
+.nav-links-home a:hover {
+  background-color: #555;
+}
+
+.dropdown-content-home {
+  display: none;
+  background-color: #333;
+  text-align: left;
+}
+
+.dropdown-content-home a {
+  color: white;
+  background-color: #777;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-home a:hover {
+  background-color: #555;
+}
+
+.dropdown-home:hover .dropdown-content-home {
+  display: block;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.hamburger span {
+  height: 0.188em;
+  background-color: white;
+  margin: 0.188em 0;
+  width: 1.563em;
+}
+
+.nav-active {
+  display: flex;
+}
+
+/* Ocultar logo cuando el menú hamburguesa esté activo */
+.logo-hidden {
+  display: none;
+}
+
+/* Modo Mobile: Mostrar/Ocultar dropdown cuando tiene la clase activa */
+.show-dropdown {
+  display: block;
+}
+
+/* Estilos HEADER TIENDA */
+
+.header-tienda {
+  background-color: white;
+  padding: 0.8em;
+}
+
+.navbar-tienda {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links-tienda {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links-tienda ul {
+  list-style-type: none;
+}
+
+.nav-links-tienda li {
+  width: 100%;
+  font-size: var(--subtitulos);
+  font-weight: bold;
+}
+
+.nav-links-tienda a {
+  color: #2c1a16;
+  text-decoration: none;
+  padding: 1em 0;
+  display: block;
+}
+
+.nav-links-tienda a:hover {
+  background-color: #555;
+}
+
+.dropdown-content-tienda {
+  display: none;
+  background-color: #333;
+  text-align: left;
+}
+
+.dropdown-content-tienda a {
+  color: #2c1a16;
+  background-color: #777;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-tienda a:hover {
+  background-color: #555;
+}
+
+.dropdown-tienda:hover .dropdown-content-tienda {
+  display: block;
+}
+
+.hamburger-tienda {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.hamburger-tienda span {
+  height: 0.188em;
+  background-color: #2c1a16;
+  margin: 0.188em 0;
+  width: 1.563em;
+}
+
+/* ESTILO HEADER CONTACTOS */
+.header-contacto {
+  background-color: #fff;
+  /*background-color: #c2701e;*/
+  padding: 0.8em;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links-contacto {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  /*  background-color: #333;*/
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links-contacto ul {
+  list-style-type: none;
+}
+
+.nav-links-contacto li {
+  width: 100%;
+  font-size: var(--subtitulos);
+  font-weight: bold;
+}
+
+.nav-links-contacto a {
+  color: #2c1a16;
+  text-decoration: none;
+  padding: 1em 0;
+  display: block;
+}
+
+.nav-links-contacto a:hover {
+  background-color: #555;
+}
+
+.dropdown-content-contacto {
+  display: none;
+  background-color: #333;
+  text-align: left;
+}
+
+.dropdown-content-contacto a {
+  color: #2c1a16;
+  background-color: #cacaca;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-contacto a:hover {
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-content-contacto {
+  display: block;
+}
+
+.icono-contacto {
+  height: 20px;
+  width: 20px;
+  margin-right: 1rem;
+}
+
+.contacto-iconos {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5rem 0 1.5rem 1rem;
+}
+
+.hamburger-contacto {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.hamburger-contacto span {
+  height: 0.188em;
+  background-color: #2c1a16;
+  margin: 0.188em 0;
+  width: 1.563em;
+}
+
+/* ESTILOS HEADER DISCO */
+.header-disco {
+  background-color: #fff;
+  /*background-color: #c2701e;*/
+  padding: 0.8em;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links-disco {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  /*  background-color: #333;*/
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links-disco ul {
+  list-style-type: none;
+}
+
+.nav-links-disco li {
+  width: 100%;
+  font-size: var(--subtitulos);
+  font-weight: bold;
+}
+
+.nav-links-disco a {
+  color: #2c1a16;
+  text-decoration: none;
+  padding: 1em 0;
+  display: block;
+}
+
+.nav-links-disco a:hover {
+  background-color: #555;
+}
+
+.dropdown-content-disco {
+  display: none;
+  background-color: #333;
+  text-align: left;
+}
+
+.dropdown-content-disco a {
+  color: #2c1a16;
+  background-color: #cacaca;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-disco a:hover {
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-content-disco {
+  display: block;
+}
+
+.icono-disco {
+  height: 15px;
+  width: 15px;
+  margin-right: 1rem;
+}
+
+.contacto-iconos {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5rem 0 1.5rem 1rem;
+}
+
+.hamburger-disco {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.hamburger-disco span {
+  height: 0.188em;
+  background-color: #2c1a16;
+  margin: 0.188em 0;
+  width: 1.563em;
+}
+
+/* Estilos HEADER TODO LO DEMAS */
+body,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  color: var(--color_titulos);
+}
+
+.header1 {
+  background-color: #0e0e0e;
+  /*background-color: #c2701e;*/
+  padding: 0.8em;
+  border-bottom: white solid 1px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  /*  background-color: #333;*/
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links ul {
+  list-style-type: none;
+}
+
+.nav-links li {
+  width: 100%;
+  font-size: var(--subtitulos);
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 1em 0;
+  display: block;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #777;
+  text-align: left;
+}
+
+.dropdown-content a {
+  color: white;
+  background-color: #777;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav-active {
+  display: flex;
+}
+/* Codigo para movil -----------------------------------------------------------------------------------------------------------------*/
+
+/* VARIABLES */
+
+:root {
+  --titulo_cada_pagina: 3rem;
+  --texto_informativo: 1.4rem;
+  --titulos: 1.8rem;
+  --subtitulos: 1.6rem;
+  --color_titulos: #333;
+}
+/* clases generales  */
+
+.titulodecadapagina {
+  font-size: var(--titulo_cada_pagina);
+  margin: 0;
+}
+.textoinfo {
+  font-size: var(--texto_informativo);
+  opacity: 100%;
+}
+.textosubtitulos {
+  font-size: var(--subtitulos);
+}
+.textotitulo {
+  font-size: var(--titulos);
+}
+
+/* FIN VARIABLES */
+
+/* EFECTO FADE IN para todo con class "fade_in" ---------------------------*/
+.fade_in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade_in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* EFECTO LUZ -------------------------------------------- */
+
+.shadow-drop-center {
+  animation: shadow-drop-center 1s linear both;
+}
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.55);
+  }
+}
+
+/*---------------------------------------------- */
+
+.header1 {
+  animation: shadow-drop-bottom 1s linear both;
+}
+@keyframes shadow-drop-bottom {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    box-shadow: 0 12px 20px -12px rgba(255, 255, 255, 0.55);
+  }
+}
+
+/*----------------------------*/
+
+/* Logo */
+.logo img {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #0e0e0e;
+  color: white;
+  text-align: center;
+  padding: 5%;
+  padding-bottom: 20%;
+  border-top: white solid 1px;
+}
+
+footer p {
+  font-size: var(--texto_informativo);
+}
+
+footer h2 {
+  font-size: var(--titulos);
+}
+
+/* CODIGO HOME */
+
+.body {
+  font-size: 1rem;
+  color: #6c6c6c;
+  float: left;
+  width: 100%;
+}
+
+.header-home {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin-bottom: -4.375rem;
+  z-index: 3;
+  padding: 1.25rem;
+  background-color: transparent;
+  height: 100%;
+}
+
+.iconos img {
+  float: left;
+  width: auto;
+  height: 1.5625rem;
+}
+
+.logo-home {
+  display: none;
+}
+
+.foto-fondo {
+  background-image: url(../.img/spinetta.jpg);
+  float: left;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: fixed;
+}
+
+.foto-fondo::before {
+  float: left;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  content: "";
+}
+
+.foto-fondo > * {
+  position: relative;
+  z-index: 2;
+}
+
+.cont-titulo-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  float: left;
+  width: 100%;
+  padding: 0 1.25rem;
+}
+
+.titulo-header {
+  font-size: 3.75rem;
+  text-align: center;
+  margin-bottom: 0.9375rem;
+  float: left;
+  width: 100%;
+  letter-spacing: -0.1875rem;
+  font-weight: 600;
+  line-height: 0.9em;
+  color: #fff;
+}
+
+.cont-titulo-header p {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+/* seccion discos */
+.discos {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.container-discos {
+  float: left;
+  width: 100%;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-top: 2.5rem;
+  padding-bottom: 3.75rem;
+}
+
+.discos-titulo-info {
+  width: 100%;
+  margin-bottom: 0.625rem;
+}
+
+.disco-titulo {
+  width: 100%;
+  text-align: center;
+  float: left;
+  position: relative;
+  z-index: 3;
+  color: #000;
+  font-size: 2.8125rem;
+}
+
+.lista-discos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-right: 0;
+  padding-top: 0.625rem;
+}
+
+.lista-discos a {
+  clear: both;
+  font-size: 0.875rem;
+  color: #6c6c6c;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 0.375rem;
+  transition: color 0.1s;
+}
+
+.lista-discos a:hover {
+  transition: color 0.1s;
+  color: #2c2c2c;
+}
+
+.columna-discos {
+  width: 100%;
+  float: left;
+}
+
+.foto-disco {
+  background-image: url(../.img/almendra-front.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin-left: 0;
+  padding-top: 100%;
+  border: 0.0625rem solid #ccc;
+  background-color: #fff;
+}
+
+.nombre-disco {
+  width: 100%;
+  margin-left: 0;
+  float: left;
+  padding-top: 0.625rem;
+  padding-left: 0;
+}
+
+.nombre-disco h3 {
+  float: left;
+  width: 100%;
+  color: #000;
+  font-size: 1.5625rem;
+  font-weight: 400;
+}
+
+.nombre-disco span {
+  padding-top: 1.25rem;
+  float: left;
+  width: 100%;
+  font-size: 1rem;
+  color: #6c6c6c;
+  padding-bottom: 1.25rem;
+  line-height: 1.3em;
+}
+
+.nombre-disco a {
+  float: left;
+  clear: both;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6c6c6c;
+  margin-bottom: 0.625rem;
+  transition: all 0.5s ease;
+}
+
+.nombre-disco a:hover {
+  color: #2c2c2c;
+}
+
+.lista-albums {
+  height: 4.375rem;
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  padding-top: 2.8125rem;
+  position: relative;
+  z-index: 3;
+}
+
+.lista-albums div div {
+  width: 3.125rem;
+  height: 3.125rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 0.25rem;
+}
+
+.lista-albums div {
+  height: 3.125rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* seccion bandas */
+.seccion-bandas {
+  float: left;
+  width: 100%;
+}
+
+.container-bandas {
+  float: left;
+  width: 100%;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-top: 1.25rem;
+}
+
+.container-bandas-titulo h2 {
+  float: left;
+  width: 100%;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: -0.1875rem;
+  font-size: 2.8125rem;
+}
+
+.container-bandas-titulo {
+  width: 100%;
+  padding-right: 0;
+  padding-bottom: 0;
+  text-align: center;
+  float: left;
+  padding-top: 1.875rem;
+  border-top: 0.0625rem solid #c2c2c2;
+}
+
+.container-bandas-info {
+  width: 100%;
+  margin-left: 0;
+  border: none;
+  text-align: center;
+  padding-left: 0;
+  float: left;
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+
+.container-fotos {
+  float: left;
+  width: 100%;
+  margin-left: -0.4375rem;
+  margin-top: -0.4375rem;
+}
+
+.foto1,
+.foto2,
+.foto3 {
+  width: 100%;
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  float: left;
+  margin: 0.4375rem;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+.p-bandas p {
+  font-size: 1rem;
+  color: #6c6c6c;
+  float: left;
+  width: 100%;
+  padding-bottom: 1.25rem;
+  line-height: 1.3em;
+}
+
+.nombre-bandas {
+  margin-top: 0;
+  float: left;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.nombre-bandas li {
+  width: 100%;
+  text-align: center;
+  float: left;
+  clear: both;
+  font-size: 0.875rem;
+  color: #6c6c6c;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 0.375rem;
+  position: relative;
+  transition: color 0.1s;
+  list-style: none;
+}
+
+.nombre-bandas li:hover {
+  transition: color 0.1s;
+  color: #2c2c2c;
+}
+
+.container-bandas-info a {
+  display: inline-block;
+  width: auto;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  color: #6c6c6c;
+  margin-bottom: 0.625rem;
+  transition: all 0.5s ease;
+}
+
+.container-bandas-info a:hover {
+  color: #2c2c2c;
+}
+
+/* seccion carrera */
+.seccion-carrera {
+  padding-top: 1.875rem;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+
+.container-carrera-titulo {
+  width: 100%;
+  padding-right: 0;
+  padding-bottom: 0;
+  text-align: center;
+  float: left;
+
+  padding: 0 1.25rem;
+}
+
+.container-carrera-titulo h2 {
+  font-size: 2.8125rem;
+  float: left;
+  width: 100%;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: -0.1875rem;
+}
+
+.container-carrera-titulo span {
+  font-size: 1rem;
+  color: #6c6c6c;
+  float: left;
+  width: 100%;
+  padding-bottom: 1.25rem;
+  line-height: 1.3em;
+}
+
+.carrera-titulo a {
+  display: inline-block;
+  width: auto;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  color: #6c6c6c;
+  margin-bottom: 0.625rem;
+  transition: all 0.5s ease;
+}
+
+.carrera-titulo a:hover {
+  color: #2c2c2c;
+}
+
+.container-carrera-info {
+  width: 100%;
+  margin-left: 0;
+  border: none;
+  text-align: center;
+  padding-left: 0;
+  float: left;
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+
+.carrera-lista {
+  margin-top: 0;
+  float: left;
+  width: 100%;
+  margin: 0.625rem 0 1.25rem 0rem;
+}
+
+.carrera-lista ul li {
+  width: 100%;
+  text-align: center;
+  float: left;
+  clear: both;
+  font-size: 0.875rem;
+  color: #6c6c6c;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 0.375rem;
+  position: relative;
+  list-style: none;
+  transition: color 0.1s;
+}
+
+.carrera-lista ul li:hover {
+  transition: color 0.1s;
+  color: #2c2c2c;
+}
+
+.foto-carrera {
+  background-image: url(../.img/foto-bio.jpeg);
+  width: 100%;
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  float: left;
+  position: relative;
+}
+
+/* seccion tienda */
+.seccion-tienda {
+  padding-top: 2.5rem;
+  float: left;
+  width: 100%;
+}
+
+.tienda-columnas {
+  float: left;
+  width: 100%;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  list-style: none;
+}
+
+.tienda-columna-izq {
+  float: left;
+  padding-right: 1.875rem;
+  padding-top: 2.5rem;
+  border-right: 0.0625rem solid #6c6c6c;
+}
+
+.tienda-columna-der {
+  float: left;
+  padding-left: 1.875rem;
+}
+
+.tienda-nombre h2 {
+  float: left;
+  width: 100%;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: -0.1875rem;
+  font-size: 2.8125rem;
+}
+
+.tienda-nombre span {
+  padding-top: 1.25rem;
+  float: left;
+  width: 100%;
+  font-size: 1rem;
+  color: #6c6c6c;
+  padding-bottom: 1.25rem;
+  line-height: 1.3em;
+}
+
+.tienda-nombre span br {
+  display: none;
+}
+
+.tienda-nombre a {
+  float: left;
+  clear: both;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6c6c6c;
+  margin-bottom: 0.625rem;
+  transition: all 0.5s ease;
+}
+
+.tienda-nombre a:hover {
+  color: #2c2c2c;
+}
+
+.tienda-lista ul li {
+  width: 100%;
+  text-align: right;
+  float: left;
+  clear: both;
+  font-size: 0.875rem;
+  color: #6c6c6c;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 0.375rem;
+  position: relative;
+  list-style: none;
+  transition: color 0.1s;
+}
+
+.tienda-lista ul li:hover {
+  transition: color 0.1s;
+  color: #2c2c2c;
+}
+
+.tienda-foto2 {
+  background-image: url(../.img/foto-tienda2.jpg);
+  width: 100%;
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  float: left;
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+/* seccion bio */
+.seccion-bio {
+  float: left;
+  width: 100%;
+  padding-bottom: 2.5rem;
+}
+
+.columnas-bio {
+  float: left;
+  width: 100%;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-top: 2.5rem;
+}
+
+.bio-titulo {
+  width: 100%;
+  padding-right: 0;
+  padding-bottom: 0;
+  text-align: center;
+  float: left;
+  padding: 0 1.25rem;
+}
+
+.bio-titulo h2 {
+  font-size: 2.8125rem;
+  float: left;
+  width: 100%;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: -0.1875rem;
+}
+
+.bio-titulo span {
+  font-size: 1rem;
+  color: #6c6c6c;
+  float: left;
+  width: 100%;
+  padding-bottom: 1.25rem;
+  line-height: 1.3em;
+}
+
+.bio-titulo span br {
+  display: none;
+}
+
+.bio-titulo a {
+  display: inline-block;
+  width: auto;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  color: #6c6c6c;
+  margin-bottom: 0.625rem;
+  transition: all 0.5s ease;
+}
+
+.bio-titulo a:hover {
+  color: #2c2c2c;
+}
+
+.bio-info,
+.container1 {
+  display: none;
+}
+
+/* seccion recital */
+.seccion-recital {
+  float: left;
+  width: 100%;
+  border-top: 0.0625rem solid #6c6c6c;
+}
+
+.recital-columnas {
+  float: left;
+  width: 100%;
+
+  margin: 0 auto;
+  max-width: 100%;
+  padding-top: 2.5rem;
+}
+
+.recital-columna-izq {
+  width: 100%;
+  text-align: center;
+  float: left;
+  padding: 0 1.25rem;
+}
+
+.recital-titulo h2 {
+  font-size: 2.8125rem;
+  float: left;
+  width: 100%;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: -0.1875rem;
+}
+
+.recital-titulo span {
+  font-size: 1rem;
+  color: #6c6c6c;
+  float: left;
+  width: 100%;
+  padding-bottom: 1.25rem;
+  line-height: 1.3em;
+}
+
+.recital-titulo a {
+  display: inline-block;
+  width: auto;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  color: #6c6c6c;
+  margin-bottom: 0.625rem;
+  transition: all 0.5s ease;
+}
+
+.recital-titulo a:hover {
+  color: #2c2c2c;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  padding-top: 1.875rem;
+}
+
+.footer-home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footer-decoracion {
+  display: inline-block;
+  height: 3.125rem;
+  width: 0.0625rem;
+  background: #b5b5b5;
+  position: relative;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links span {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.625rem;
+}
+
+.footer-iconos img {
+  height: 1.875rem;
+  width: 1.875rem;
+}
+
+.footer-iconos {
+  padding-bottom: 0.9375rem;
+}
+
+/* tienda */
+.carrito-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.25rem;
+  display: flex;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.barra-busqueda {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0 0.9375rem 1.25rem;
+  background-color: white;
+}
+
+.barra-busqueda input {
+  padding: 0.625rem;
+  width: 100%;
+  max-width: 25rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.barra-busqueda button {
+  padding: 0.625rem 1.25rem;
+  background-color: #2c1a16;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.barra-busqueda button:hover {
+  background-color: #444;
+}
+
+.banner {
+  width: 100%;
+}
+
+.destacados {
+  display: block;
+  padding: 0 0.9375rem 0 0.9375rem;
+  width: 100%;
+}
+
+.titulo-container-tienda {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.titulo-tienda {
+  padding: 1.5625rem 0 1.5625rem 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.img-tienda {
+  height: 15.625rem;
+  background-color: rgb(233, 245, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-tienda img {
+  width: 10.9375rem;
+}
+
+.articulos-tienda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 75rem; /* o el ancho que prefieras */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center; /* Esto ayuda a centrar los hijos si no ocupan todo el ancho */
+}
+
+.articulos-tienda div {
+  width: 45%;
+  min-width: 10.625rem;
+}
+
+.figcaption-tienda {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+  padding: 0.625rem 0;
+  text-align: left;
+}
+
+.figcaption-tienda span {
+  padding: 0.8125rem 0 0.8125rem 0;
+}
+
+.figcaption-tienda small {
+  color: #929191;
+}
+
+.figcaption-tienda strong {
+  color: #333;
+  font-size: var(--subtitulos);
+}
+
+.banner2 {
+  width: 100%;
+  padding: 4.375rem 0.9375rem 3.75rem;
+}
+
+.popup-tienda {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem; /* Espacio fuera del popup */
+  border: 0.0625rem solid rgb(153, 153, 153);
+  display: none;
+}
+
+.popup-contenido {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 95vw;
+  max-height: 95vh;
+  box-sizing: border-box;
+  overflow: auto;
+  /* Centrado vertical y horizontal gracias al flex del padre */
+}
+
+.form-compra {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form-compra label {
+  font-weight: bold;
+}
+
+.form-compra input,
+.form-compra select {
+  padding: 0.5em;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.375rem;
+}
+
+.form-compra button {
+  background: #2c1a16;
+  color: #fff;
+  border: none;
+  padding: 0.75em;
+  border-radius: 0.375rem;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-compra button:hover {
+  background: #444;
+}
+
+.popup-gracias {
+  position: fixed;
+  inset: 0;
+  background: rgba(44, 26, 22, 0.7);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.popup-gracias-contenido {
+  background: #fff;
+  padding: 2em 1.5em;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 90vw;
+  min-width: 13.75rem;
+}
+
+.popup-gracias-contenido h2 {
+  margin-bottom: 0.5em;
+  color: #2c1a16;
+}
+
+.popup-gracias-contenido button {
+  margin-top: 1em;
+  background: #2c1a16;
+  color: #fff;
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 0.375rem;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.popup-gracias-contenido button:hover {
+  background: #444;
+}
+
+.popup-cerrar {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #2c1a16;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+  padding: 0;
+}
+
+.nav-links-tienda.nav-active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* PAGINA DE BIOGRAFIA */
+
+body.pagina-bio h1 {
+  color: #fff;
+  justify-self: center;
+}
+img.imagenbannerbio {
+  width: 100%;
+}
+
+body.pagina-bio div.contenedorbio {
+  background-image: url(../biografia/img/Bio_iphone_16.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* FADE IN DIV DE BIOGRAFIA ---------------------------*/
+.fade_in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade_in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+div.primeros3articles {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+img.biosecimg {
+  width: 100%;
+}
+img.biosecimg1 {
+  display: none;
+}
+section.seccionbio {
+  display: flex;
+  flex-direction: column;
+}
+div.biosec1,
+.biosec2,
+.biosec3,
+.biosec4 {
+  align-self: center;
+  width: 90%;
+  padding: 5%;
+  background-color: white;
+  opacity: 90%;
+}
+div.contenedorbio section article h2 {
+  font-size: var(--titulos);
+}
+.textoblanco {
+  color: white;
+}
+
+/* pagina de carrera musical */
+body.pagina-carreramusical {
+  background-color: black;
+}
+div.imagenytitulo {
+  width: 100%;
+}
+img.fotocarreracelular {
+  width: 100%;
+}
+main.contenedorcarrera {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+div.imagenytitulo h1 {
+  justify-self: center;
+}
+section.sectioncarrera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  color: white;
+}
+section.sectioncarrera article {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+div.carrera-solista {
+  border-top: white solid;
+  background-image: url(../carreramusical/img/Gustavo_Cerati_Y_Spinetta.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+div.carrea-colaboraciones {
+  border-top: white solid;
+  background-image: url("../carreramusical/img/image_7.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+a.boton-verde {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  padding: 3%;
+  background-color: #28a745;
+  color: white;
+  border-radius: 2vw;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+a.boton-verde:hover {
+  background-color: #218838;
+}
+
+/* pagina de otros proyectos */
+body.bodycolaboraciones {
+  background-image: url(../carreramusical/colaboraciones/img/Fondorojoceluotrosproyectos.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+div.titulocolabo {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+main.otrosproyectos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section.otrosproyectossection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div.proyectosparte1 {
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 5%;
+}
+div.infocolabo {
+  align-self: center;
+  justify-content: center;
+  padding: 5%;
+  background-color: red;
+  opacity: 70%;
+}
+div.proyectosparte2 {
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 5%;
+}
+div.infocolabo2 {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  padding: 5%;
+  background-color: red;
+  opacity: 70%;
+}
+img.colaboimg {
+  width: 100%;
+  align-self: center;
+  border-radius: 5%;
+}
+
+/*PAGINA SOLISTA*/
+body.solista {
+  background-image: url(../carreramusical/solista/img/fondoguitarra.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+}
+main.contenedorsolista h1 {
+  text-align: center;
+  color: white;
+  margin: 5%;
+}
+section.sectionsolista {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div.solistaparte,
+div.solistaparte2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+}
+
+div.solistainfo1 {
+  padding: 5%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  opacity: 90%;
+}
+div.solistainfo {
+  padding: 5%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  opacity: 90%;
+}
+img.imagensolista {
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+  border-radius: 5%;
+}
+
+/*PAGINA DE ULTIMO RECITAL*/
+
+main.contenedirrecital {
+  background-image: url(../ultimorecital/img/fondorecital.jfif);
+  background-size: cover;
+  justify-content: center;
+  width: 100%;
+  background-color: #2c1a16;
+  color: white;
+  text-align: center;
+}
+main.contenedirrecital h1 {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+section.sectionrecital {
+  width: 90%;
+  justify-self: center;
+}
+div.inforecital1 {
+  background-color: rgba(37, 38, 30, 1);
+  padding: 5%;
+  opacity: 90%;
+}
+div.inforeciltal2 {
+  background-color: rgba(88, 59, 9, 1);
+  padding: 5%;
+  opacity: 90%;
+}
+img.imagenesinforecital {
+  width: 90%;
+  border-radius: 5%;
+}
+
+/* Menu Bandas ---------------------------------------------------------*/
+
+div#contenedorbandas {
+  display: flex;
+  justify-content: center;
+}
+
+main.bandas {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5%;
+  background-image: url(../bandas/img/Fondo_bandas_mobile.jpg);
+}
+
+div#contenedorbandas main.bandas article {
+  background-color: #bbffb2;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+.bandas h2 {
+  font-size: var(--titulos);
+  color: var(--color_titulos);
+  text-align: center;
+  padding-top: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+.bandas h1 {
+  font-size: var(--titulos);
+  width: 100%;
+  padding: 0.8em;
+  text-align: center;
+  background-color: #001f02;
+  color: white;
+  border-bottom: white solid 0.2em;
+  margin: 0;
+}
+
+main.bandas p {
+  background-color: #f3ffe0;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  font-size: var(--subtitulos);
+}
+
+main.bandas img {
+  border: white solid 1px;
+  width: 100%;
+}
+
+aside.bandas {
+  display: none;
+}
+
+/* Pagina de c/ Banda --------------------------------------------------------*/
+
+body#spinetta_jade {
+  margin: 0;
+  padding: 0;
+  background: #080601;
+  color: var(--color_titulos);
+}
+
+main.spinetta_jade {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Portada */
+
+article#fondo_bandas {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+#fondo_bandas img {
+  width: 100%;
+}
+
+.fondo-caja h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  padding: 15px;
+  background-color: #e0e0e0;
+  text-align: center;
+  font-size: var(--titulos);
+}
+
+/* Discos */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 10px;
+  align-items: baseline;
+  width: 100%;
+  justify-content: center;
+}
+
+.album {
+  text-align: center;
+  background-color: #e0e0e0;
+  width: 95%;
+  height: auto;
+  font-size: var(--subtitulos);
+  border-bottom: #fff017 solid 5px;
+}
+
+.album img {
+  width: 100%;
+  height: auto;
+  border-left: 5px solid #fcf961;
+  border-right: 5px solid #fcf961;
+}
+
+.album img {
+  animation: shadow-drop-center 1s linear both;
+}
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    box-shadow: 0 0 20px 0 #fffd8f;
+  }
+}
+
+/* Historia */
+
+article.historia {
+  background: #17393b;
+  padding: 20px;
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: white solid 5px;
+  border-bottom: white solid 5px;
+  border-style: dotted;
+}
+
+section.historia {
+  background: white;
+  padding: 20px;
+  height: auto;
+  width: 100%;
+}
+
+.historia h2 {
+  margin-top: 0;
+  text-align: left;
+  font-size: var(--titulos);
+}
+
+.historia i {
+  text-align: right;
+}
+
+.historia p {
+  font-size: var(--texto_informativo);
+}
+
+.imagen_final img {
+  padding: 15px;
+  border: 10px solid #001f02;
+  width: 100%;
+  border-style: double;
+}
+
+article.imagen_final {
+  width: 100%;
+  text-align: center;
+}
+
+section.imagen_final {
+  background: #000f01;
+  padding: 20px;
+  font-size: var(--texto_informativo);
+  height: auto;
+  width: 100%;
+}
+
+.imagen_final p {
+  font-size: var(--texto_informativo);
+  color: white;
+  font-weight: bold;
+}
+
+/* CONTACTOS */
+.link-contacto {
+  color: #2c1a16;
+  text-decoration: none;
+  font-size: var(--texto_informativo);
+}
+
+.main-contacto {
+  padding: 25px 2.1875rem 0 2.1875rem;
+  color: #2c1a16;
+  background-color: #cfcfcf;
+  width: 100%;
+}
+
+.barra-contacto {
+  display: block;
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #2c1a16;
+  margin: 0.625rem 0;
+}
+
+.subtitulo-contacto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 3.125rem;
+}
+
+.divisor-contacto {
+  width: 0.375rem;
+  height: 0.0625rem;
+  background-color: #2c1a16;
+  margin: 0.5rem 0.375rem 0.5rem 0.375rem;
+}
+
+.contacto-columna-izq strong,
+.mision-contacto strong {
+  display: inline-block;
+  padding-bottom: 0.9375rem;
+}
+
+.contacto-columnas a {
+  display: inline-block;
+}
+
+.contacto-columna-der {
+  display: none;
+}
+
+.mision-contacto {
+  padding-bottom: 1.25rem;
+}
+
+.barra1-contacto {
+  display: block;
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #2c1a16;
+}
+
+.contacto-banner {
+  display: none;
+}
+
+.contacto-banner {
+  background-image: url(../contactos/img/foto-tienda.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 100%;
+  display: block;
+  margin-top: 30px;
+}
+
+/* CODIGO DISCO */
+.container-disco {
+  padding-top: 40px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.info-discografia {
+  float: left;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.lista-discos-info {
+  float: left;
+  width: 100%;
+}
+
+.ullista-disco {
+  width: 100%;
+  float: left;
+  position: relative;
+  border-top: 1px solid #b5b5b5;
+  padding-top: 15px;
+  margin-top: 15px;
+
+  list-style: none;
+}
+
+.lilista-disco {
+  float: left;
+  width: 100%;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #6c6c6c;
+  list-style: none;
+}
+
+.discos-container {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.articulo-disco {
+  float: left;
+  margin: 0 15px 30px 15px;
+  border-bottom: 1px solid #b5b5b5;
+}
+
+.foto-discogra {
+  float: left;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.articulo-info {
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.articulo-info p {
+  float: left;
+  width: calc(100% - 50px);
+  padding-right: 10px;
+  color: #000;
+  font-size: 16px;
+  padding-bottom: 20px;
+  line-height: 1.3em;
+}
+
+.articulo-info span {
+  float: left;
+  width: 50px;
+  text-align: right;
+  padding-bottom: 20px;
+  line-height: 1.3em;
+  font-size: 16px;
+}
+
+@media (min-width: 48rem) {
+  /* Estilos para pantallas más grandes */
+  .header-home {
+    padding: 0px;
+  }
+
+  .navbar-home {
+    display: flex;
+    margin: 10px;
+  }
+
+  .nav-links-home {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    width: 40.5rem;
+    background-color: rgba(31, 31, 31, 0.5);
+    border-radius: 1.25rem;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    position: static;
+  }
+
+  .nav-links-home li {
+    width: auto;
+    padding: 0 5px;
+    font-weight: bold;
+  }
+
+  .nav-links-home li a,
+  .nav-links-home li .dropbtn {
+    font-size: 11px;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    display: block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 1.25rem;
+    background: rgba(31, 31, 31, 0.5);
+  }
+
+  .nav-links-home li a:hover,
+  .nav-links-home li .dropbtn:hover {
+    background: rgba(214, 214, 214, 0.25);
+    color: #2c1a16;
+    transform: scale(1.08);
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.568);
+  }
+
+  /* Dropdowns en desktop */
+  .dropdown-content-home {
+    position: absolute;
+    display: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    min-width: 11.25rem;
+    z-index: 1;
+    background-color: rgba(31, 31, 31, 0.5);
+    border-radius: 1.25rem;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.568);
+  }
+
+  .dropdown-home:hover .dropdown-content-home {
+    display: block;
+  }
+
+  .dropdown-content-home li {
+    margin: 0;
+  }
+
+  .dropdown-content-home a {
+    font-size: 11px;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    display: block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 1.25rem;
+    background: rgba(31, 31, 31, 0.5);
+  }
+
+  .dropdown-content-home a:hover {
+    background: rgba(214, 214, 214, 0.25);
+    color: #2c1a16;
+  }
+
+  .hamburger {
+    display: none; /* Ocultar hamburguesa en desktop */
+  }
+
+  .logo-hidden {
+    display: block; /* Mostrar el logo en desktop */
+  }
+
+  .tienda-nombre span br {
+    display: block;
+  }
+
+  .bio-titulo span br {
+    display: block;
+  }
+
+  .logo-home {
+    display: none;
+  }
+
+  .foto-fondo {
+    background-image: url("../.img/spinetta.jpg");
+    float: left;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+
+  .foto-fondo::before {
+    float: left;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    content: "";
+  }
+
+  /* Para que el contenido quede arriba del overlay */
+  .foto-fondo > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .cont-titulo-header {
+    position: relative;
+    z-index: 2;
+    width: 87.5rem;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .titulo-header {
+    text-align: left;
+    width: 100%;
+    font-size: 6.5625rem;
+    letter-spacing: -0.1875rem;
+    font-weight: 600;
+    line-height: 0.9em;
+    color: #fff;
+    margin-bottom: 1.5625rem;
+  }
+
+  .cont-titulo-header p {
+    float: left;
+    max-width: 100%;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0rem;
+    margin-inline-end: 0rem;
+    unicode-bidi: isolate;
+    font-size: 1.25rem;
+    color: #fff;
+    text-align: left;
+  }
+
+  .discos {
+    padding-top: 5rem;
+    margin-bottom: -5.625rem;
+    width: 87.5rem;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .discos-titulo-info {
+    float: left;
+    width: 35%;
+  }
+
+  .lista-discos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    float: left;
+    width: 100%;
+    padding-right: 17%;
+  }
+
+  .lista-discos a {
+    float: right;
+    clear: both;
+    font-size: 0.875rem;
+    color: #6c6c6c;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 0.375rem;
+    transition: all 0.5s ease;
+  }
+
+  .container-discos {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+
+  .disco-titulo {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    color: #000;
+    text-align: right;
+    font-weight: 600;
+    letter-spacing: -0.1875rem;
+    font-size: 5.4375rem;
+  }
+
+  .columna-discos {
+    float: left;
+    width: 65%;
+  }
+
+  .disco-info {
+    float: left;
+    width: 100%;
+    transform: translate(-6%, -3.125rem);
+  }
+
+  .foto-disco {
+    background-image: url(../.img/almendra-front.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    width: 40%;
+    padding-top: 40%;
+    border: 0.0625rem solid #ccc;
+    background-color: #fff;
+  }
+
+  .nombre-disco {
+    float: right;
+    width: 60%;
+    padding-left: 1.625rem;
+    padding-top: 5rem;
+  }
+
+  .nombre-disco h3 {
+    float: left;
+    width: 100%;
+    color: #000;
+    font-size: 1.5625rem;
+    font-weight: 400;
+  }
+
+  .nombre-disco span {
+    float: left;
+    width: 100%;
+    padding-top: 4.375rem;
+    font-size: 1rem;
+    color: #6c6c6c;
+    padding-bottom: 1.25rem;
+    line-height: 1.3em;
+  }
+
+  .nombre-disco a {
+    float: left;
+    clear: both;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    color: #6c6c6c;
+    margin-bottom: 0.625rem;
+    transition: all 0.5s ease;
+  }
+
+  .lista-albums {
+    float: left;
+    width: 29.375rem;
+    max-width: 100%;
+    transform: translate(1.5625rem, -3.75rem);
+    padding: 0 2.8125rem;
+  }
+
+  .lista-albums div div {
+    height: 4.375rem;
+    width: 4.25rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 0.25rem;
+  }
+
+  .lista-albums div {
+    height: 4.375rem;
+    width: 23.75rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .seccion-bandas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+  }
+
+  .container-bandas {
+    width: 87.5rem;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .container-bandas-titulo {
+    float: left;
+    width: 31%;
+    padding-right: 2.5rem;
+    text-align: right;
+    padding-bottom: 1.25rem;
+    border-top: 0;
+    border-right: 0.0625rem solid #b5b5b5;
+  }
+
+  .container-bandas-titulo h2 {
+    float: left;
+    width: 100%;
+
+    color: #000;
+    font-weight: 600;
+    letter-spacing: -0.1875rem;
+    font-size: 5.4375rem;
+  }
+
+  .container-bandas-info {
+    float: left;
+    width: 69%;
+    padding-left: 1.25rem;
+    position: relative;
+    padding-bottom: 1.25rem;
+    padding-top: 2.5rem;
+  }
+
+  .nombre-bandas {
+    float: left;
+    width: 100%;
+    margin: 1.25rem 0;
+  }
+
+  .nombre-bandas li {
+    float: left;
+    clear: both;
+    font-size: 0.875rem;
+    color: #6c6c6c;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 0.375rem;
+    position: relative;
+    transition: all 0.5s ease;
+    text-align: left;
+  }
+
+  .container-bandas-info a {
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    color: #6c6c6c;
+    margin-bottom: 0.625rem;
+    text-align: left;
+  }
+
+  .container-fotos {
+    float: left;
+    width: 100%;
+    margin-left: -0.4375rem;
+    margin-top: -0.4375rem;
+  }
+
+  .bandas-fotos {
+    display: flex;
+  }
+
+  .foto-chicas {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .foto1 {
+    width: calc(50% - 0.875rem);
+    padding-top: calc(50% - 0.875rem);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    margin: 0.4375rem;
+    position: relative;
+  }
+
+  .foto2 {
+    width: calc(100%);
+    padding-top: calc(50%);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    margin: 0.4375rem;
+    position: relative;
+  }
+
+  .foto3 {
+    width: calc(50% - 1.875rem);
+    padding-top: calc(50% - 1.875rem);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    margin: 0.4375rem;
+    position: relative;
+  }
+
+  .container-carrera-titulo {
+    display: flex;
+    float: left;
+    width: calc(31% + 0.4375rem);
+    padding-right: 2.5rem;
+    text-align: right;
+    padding-left: 0;
+    padding: 0 2.5rem 1.25rem 0;
+  }
+
+  .seccion-carrera {
+    width: 100%;
+    float: left;
+    padding-top: 0;
+    margin-top: -0.4375rem;
+  }
+
+  .carrera-main-container {
+    width: 87.5rem;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .carrera-titulo {
+    float: left;
+    width: 100%;
+  }
+
+  .carrera-titulo h2 {
+    float: left;
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: -0.1875rem;
+    padding-top: 8.75rem;
+    position: relative;
+    z-index: 3;
+    font-size: 5.4375rem;
+  }
+
+  .carrera-titulo span {
+    font-size: 1rem;
+    color: #6c6c6c;
+    float: left;
+    width: 100%;
+    padding-bottom: 1.25rem;
+    line-height: 1.3em;
+  }
+
+  .carrera-titulo a {
+    display: inline-block;
+    width: auto;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    color: #6c6c6c;
+    margin-bottom: 0.625rem;
+  }
+
+  .container-carrera-info {
+    float: left;
+    width: 60%;
+    padding-top: 4.375rem;
+    padding-left: 1.25rem;
+    border-left: 0.0625rem solid #b5b5b5;
+    position: relative;
+  }
+
+  .carrera-lista ul li {
+    float: left;
+    clear: both;
+    font-size: 0.875rem;
+    color: #6c6c6c;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 0.375rem;
+    position: relative;
+    width: auto;
+  }
+
+  .foto-carrera {
+    background-image: url(../.img/foto-bio.jpeg);
+    height: 21.875rem;
+    width: 38.375rem;
+    padding-top: 0;
+  }
+
+  .seccion-tienda {
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+  }
+
+  .tienda-columnas {
+    width: 100%;
+  }
+
+  .tienda-columna-izq {
+    float: left;
+    width: calc(34% + 0.75rem);
+    padding-right: 1.875rem;
+    border: 0rem;
+  }
+
+  .tienda-columna-der {
+    width: 65%;
+    float: left;
+    border-left: 0.0625rem solid #b5b5b5;
+    padding-bottom: 1.25rem;
+  }
+
+  .tienda-lista {
+    padding-top: 8.4375rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tienda-nombre {
+    padding-top: 6.25rem;
+  }
+
+  .tienda-lista ul {
+    text-align: end;
+  }
+
+  .tienda-nombre h2 {
+    float: left;
+    width: 100%;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: -0.1875rem;
+    font-size: 5.4375rem;
+  }
+
+  .tienda-nombre span {
+    float: left;
+    font-size: 1rem;
+    color: #6c6c6c;
+    width: 100%;
+    padding-bottom: 1.25rem;
+    line-height: 1.3em;
+  }
+
+  .tienda-nombre a {
+    display: inline-block;
+    width: auto;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    color: #6c6c6c;
+    margin-bottom: 0.625rem;
+  }
+
+  .tienda-lista ul li {
+    font-size: 0.875rem;
+    color: #6c6c6c;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .tienda-seccion-fotos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: -0.4375rem;
+    margin-top: -0.4375rem;
+    padding: 0.3125rem 0;
+  }
+
+  .tienda-foto {
+    width: 59%;
+    height: 18.75rem;
+    background-image: url(../.img/foto-tienda.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-left: 0.9375rem;
+  }
+
+  .tienda-foto2 {
+    width: 39%;
+    height: 18.75rem;
+    background-image: url(../.img/foto-tienda2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-left: 0.625rem;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .seccion-bio {
+    padding-bottom: 0;
+  }
+
+  .columnas-bio {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .bio-columna-izq {
+    float: left;
+    width: 31%;
+    padding-right: 2.5rem;
+    padding-bottom: 1.875rem;
+    border-right: 0.0625rem solid #b5b5b5;
+  }
+
+  .bio-columna-der {
+    float: left;
+    width: 69%;
+
+    padding: 1.875rem;
+  }
+
+  .bio-titulo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+  }
+
+  .bio-titulo h2 {
+    width: 100%;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: -0.1875rem;
+    padding-top: 8.75rem;
+    font-size: 5.4375rem;
+    padding-bottom: 0.3125rem;
+  }
+
+  .bio-titulo span {
+    font-size: 1rem;
+    color: #6c6c6c;
+    width: 100%;
+    padding-bottom: 1.25rem;
+    line-height: 1.3em;
+  }
+
+  .bio-titulo a {
+    display: inline-block;
+    width: auto;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    color: #6c6c6c;
+    margin-bottom: 0.625rem;
+  }
+
+  .bio-info {
+    font-size: 1.5625rem;
+    padding-top: 8.75rem;
+    color: #6c6c6c;
+    font-weight: 300;
+    font-style: italic;
+    display: block;
+    padding-left: 1.875rem;
+  }
+
+  .container-fotos-bio {
+    float: left;
+    width: 100%;
+    margin-left: -0.4375rem;
+    margin-top: -0.4375rem;
+    padding-top: 0.75rem;
+  }
+
+  .bandas-fotos-bio {
+    display: flex;
+  }
+
+  .foto-chicas-bio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .foto2bio {
+    width: 100%;
+    height: 20.3125rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 0.4375rem 0.4375rem 0;
+  }
+
+  .foto-grande-bio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: 0.0625rem solid #b5b5b5;
+    font-size: 1.125rem;
+    font-style: italic;
+    color: #6c6c6c;
+  }
+
+  .container2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .seccion-recital {
+    border: 0;
+  }
+
+  .recital-columnas {
+    float: left;
+    width: 100%;
+    border: 0;
+    padding-top: 0;
+  }
+
+  .recital-columna-izq {
+    float: left;
+    width: 31%;
+    padding-right: 2.5rem;
+    padding-bottom: 1.875rem;
+    border-right: 0.0625rem solid #b5b5b5;
+  }
+
+  .recital-columna-der {
+    float: left;
+    width: 69%;
+
+    padding: 1.875rem 0 0 1.875rem;
+  }
+
+  .recital-titulo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+  }
+
+  .recital-titulo h2 {
+    width: 100%;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: -0.1875rem;
+    padding-top: 8.75rem;
+    font-size: 5.4375rem;
+    padding-bottom: 0.3125rem;
+  }
+
+  .recital-titulo span {
+    font-size: 1rem;
+    color: #6c6c6c;
+    width: 100%;
+    padding-bottom: 1.25rem;
+    line-height: 1.3em;
+  }
+
+  .recital-titulo a {
+    display: inline-block;
+    width: auto;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    color: #6c6c6c;
+    margin-bottom: 0.625rem;
+  }
+
+  .recital-info {
+    font-size: 1.875rem;
+    padding-top: 7.5rem;
+    color: #6c6c6c;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .recital-container-video {
+    padding: 4.375rem 0 0 1.25rem;
+    width: 69%;
+  }
+
+  iframe {
+    width: 100%;
+
+    height: 23.125rem;
+    padding-top: 1.875rem;
+  }
+
+  .footer-home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer-decoracion {
+    display: inline-block;
+    height: 6.25rem;
+    width: 0.0625rem;
+    background: #b5b5b5;
+    position: relative;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links span {
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0.625rem;
+  }
+
+  .footer-iconos img {
+    height: 1.875rem;
+    width: 1.875rem;
+  }
+
+  .footer-iconos {
+    padding-bottom: 0.9375rem;
+  }
+
+  /* tienda */
+  .popup-contenido {
+    max-width: 25rem;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .popup-tienda {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    display: none;
+  }
+
+  .nav-links-tienda {
+    display: flex !important; /* Mostrar menú siempre visible en desktop */
+    flex-direction: row;
+    width: auto;
+    text-align: initial;
+  }
+
+  .nav-links-tienda li {
+    width: auto;
+    padding: 0 1em;
+  }
+
+  .nav-links-tienda a {
+    padding: 0.5em 1em;
+  }
+
+  .hamburger-tienda {
+    display: none; /* Ocultar hamburguesa en desktop */
+  }
+
+  /* Ajustar logo */
+  .logo-tienda img {
+    width: 250px; /* Ajusta según prefieras */
+    padding-left: 50px;
+    width: auto;
+  }
+
+  /* Dropdowns en desktop */
+  .dropdown-content-tienda {
+    position: absolute;
+    display: none;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 180px;
+    z-index: 1;
+  }
+
+  .dropdown-tienda:hover .dropdown-content-tienda {
+    display: block;
+  }
+
+  .dropdown-content-tienda a {
+    color: #2c1a16;
+    background-color: white;
+    padding: 0.5em 1em;
+    text-align: left;
+  }
+
+  .carrito-btn {
+    display: none;
+  }
+
+  .dropdown-content-tienda a:hover {
+    background-color: #eee;
+  }
+
+  .carrito-btn {
+    display: none;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #eee;
+  }
+
+  /* Barra búsqueda centrada con más espacio */
+  .barra-busqueda {
+    padding: 1rem 2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+
+  .barra-busqueda input {
+    max-width: 25rem;
+  }
+
+  /* Destacados en grid */
+  .articulos-tienda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* igual que grid-gap */
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+
+  .articulos-tienda div {
+    flex: 1 1 11.25rem;
+    max-width: 100%;
+  }
+
+  /* Ajustes para footer */
+  footer {
+    padding: 3rem 0;
+  }
+
+  .titulo-container-tienda {
+    width: 64%;
+    margin: 0 auto;
+  }
+
+  .titulo-tienda {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .popup-gracias {
+    position: fixed;
+    inset: 0;
+    background: rgba(44, 26, 22, 0.7);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+
+  .popup-gracias-contenido {
+    background: #fff;
+    padding: 2em 1.5em;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 90vw;
+    min-width: 13.75rem;
+  }
+
+  .popup-gracias-contenido h2 {
+    margin-bottom: 0.5em;
+    color: #2c1a16;
+  }
+
+  .popup-gracias-contenido button {
+    margin-top: 1em;
+    background: #2c1a16;
+    color: #fff;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 0.375rem;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .popup-gracias-contenido button:hover {
+    background: #444;
+  }
+
+  .popup-cerrar {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #2c1a16;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1;
+    padding: 0;
+  }
+  /* VARIABLES */
+  :root {
+    --texto_informativo: 1rem;
+    --titulos: 1.8rem;
+    --subtitulos: 1.3rem;
+    --color_titulos: #0e0e0e;
+  }
+
+  /* Mostrar logo siempre en pantallas grandes */
+  .logo {
+    display: block;
+    align-self: unset;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    width: auto;
+  }
+
+  .nav-links a {
+    padding: 0.8em 1.2em;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: -1em;
+    z-index: 1;
+    min-width: calc(100% + 2em);
+  }
+
+  .dropdown-content a {
+    background-color: transparent;
+  }
+
+  .nav-links li {
+    position: relative;
+  }
+
+  /* Footer General */
+  footer {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  /* pagina de biografia desktop*/
+  body.pagina-bio {
+    background-color: rgba(234, 205, 41, 1);
+  }
+  body.pagina-bio div.contenedorbio {
+    background-image: url(../biografia/img/Rectangle\ 52.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  div.contenedorbio h1 {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 1em;
+  }
+
+  img.imagenbannerbio {
+    display: none;
+  }
+  section.seccionbio {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 90%;
+  }
+  div.primeros3articles {
+    display: flex;
+    flex-direction: row;
+  }
+  div.biosec1 {
+    width: 33.33%;
+    padding: 3.5%;
+    height: 100%;
+  }
+  div.biosec1 article {
+    padding-top: 0%;
+  }
+
+  div.biosec2 {
+    display: flex;
+    flex-direction: row;
+    width: 66.66%;
+    padding: 0%;
+  }
+  div.biosec2 article {
+    width: 50%;
+    padding: 5%;
+  }
+
+  div.biosec3,
+  div.biosec4 {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 90%;
+  }
+  div.biosec3,
+  div.biosec4 {
+    box-sizing: border-box;
+    background-color: rgba(227, 188, 33, 1);
+    width: 50%;
+    padding: 5%;
+    align-self: stretch;
+  }
+  div.biosec2,
+  div.biosec3,
+  div.biosec1 {
+    background-color: rgba(248, 248, 248, 1);
+  }
+  div.biosec4 {
+    background-color: rgba(227, 188, 33, 1);
+  }
+  img.biosecimg1 {
+    display: block;
+    width: 100%;
+  }
+  img.biosecimg {
+    display: block;
+    width: 50%;
+  }
+  div.infobio {
+    width: 70%;
+  }
+
+  /* PAGINA DE CARRERA PARA DESKTOP  */
+  body.pagina-carreramusical {
+    background-color: black;
+  }
+  div.imagenytitulo {
+    background-image: url(../carreramusical/img/bannerdesk.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+  }
+  img.fotocarreracelular {
+    display: none;
+  }
+  section.sectioncarrera {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  article.carreramusicaldescrip {
+    width: 100%;
+  }
+  div.carrea-colaboraciones,
+  div.carrera-solista {
+    width: 50%;
+    height: 100vh;
+  }
+
+  /* PAGINA OTROS PROYECTOS DESKTOP */
+  body.bodycolaboraciones {
+    background-image: url(../carreramusical/colaboraciones/img/KRG4CWWX7BFXXDZYJDKLF5OAOI.jpg);
+    background-size: cover;
+  }
+  section.otrosproyectossection {
+    flex-direction: row;
+  }
+  div.proyectosparte1,
+  div.proyectosparte2 {
+    width: 50%;
+  }
+  div.infocolabo,
+  div.infocolabo2 {
+    height: 100%;
+  }
+
+  /*PAGINA DE ULTIMO RECITAL DESKTOP*/
+  main.contenedirrecital h1 {
+    padding: 3%;
+  }
+  section.sectionrecital {
+    display: flex;
+    flex-direction: row;
+  }
+  div.inforecital1,
+  div.inforeciltal2 {
+    width: 50%;
+  }
+
+  /* PAGINA SOLSITA DESKTOP */
+  main.contenedorsolista h1 {
+    background-color: #333;
+  }
+  section.sectionsolista {
+    display: flex;
+    flex-direction: row;
+  }
+  div.solistainfo {
+    height: 100%;
+  }
+  /* Bandas ------------------------------------------------------*/
+  div#contenedorbandas main.bandas article {
+    width: 47%;
+    margin: 0.5em;
+    height: 30%;
+  }
+
+  main.bandas h1 {
+    text-shadow: 0px 0px 5px #bbffb2;
+    font-weight: bold;
+  }
+
+  .bandas h1 {
+    padding-bottom: 0em;
+    padding-top: 2.2em;
+  }
+
+  main.bandas p {
+    padding-top: 3em;
+    padding-bottom: 0em;
+  }
+
+  main.bandas {
+    background-image: url(../bandas/img/Fondo_bandas.jpg);
+    width: 70%;
+    padding-bottom: 5.2em;
+  }
+
+  aside.bandas {
+    width: 30%;
+    display: flex;
+    background-color: #bbffb2;
+    border-left: white solid 0.3em;
+    text-align: center;
+  }
+
+  aside.bandas img {
+    width: 80%;
+    border: #001f02 solid 0.5em;
+    border-style: double;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+  }
+
+  main.bandas p {
+    width: 96%;
+    border: #001f02 solid 0.2em;
+  }
+  /* Bandas/Spinetta Jade ----------------------------------------*/
+
+  article#fondo_bandas {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  #fondo_bandas img {
+    border-left: 10px solid #ffca1d;
+    border-right: 10px solid #ffca1d;
+    padding-left: 11px;
+    padding-right: 11px;
+    width: 85%;
+  }
+
+  .fondo-caja h1 {
+    width: 25%;
+  }
+
+  /* Bandas/Spinetta Jade/Discos */
+
+  .gallery {
+    gap: 5%;
+    width: 90.5%;
+  }
+
+  .album {
+    width: 20%;
+  }
+
+  .album img {
+    width: 100%;
+  }
+
+  /* Bandas/Spinetta Jade/Historia */
+
+  section.historia {
+    width: 88%;
+    border-left: 2.2em solid #477a7c;
+    border-right: 2.2em solid #477a7c;
+    border-style: double;
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  .historia p {
+    font-size: var(--texto_informativo);
+  }
+
+  .imagen_final img {
+    width: 65%;
+  }
+
+  section.imagen_final {
+    width: 100%;
+  }
+
+  .charly_flaco img {
+    width: 75%;
+  }
+
+  article.charly_flaco {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  /* SECCION CONTACTOS*/
+  .nav-links-contacto {
+    display: flex; /* Mostrar menú siempre visible en desktop */
+    flex-direction: row;
+    width: auto;
+    text-align: initial;
+  }
+
+  .nav-links-contacto li {
+    width: auto;
+    padding: 0 1em;
+  }
+
+  .nav-links-contacto a {
+    padding: 0.5em 1em;
+  }
+
+  .hamburger-contacto {
+    display: none; /* Ocultar hamburguesa en desktop */
+  }
+
+  /* Ajustar logo */
+  .logo img {
+    width: 80%; /* Ajusta según prefieras */
+    padding-left: 2em;
+  }
+
+  /* Dropdowns en desktop */
+  .dropdown-content-contacto {
+    position: absolute;
+    display: none;
+    background-color: #2c1a16;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 180px;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content-contacto {
+    display: block;
+  }
+
+  .dropdown-content-contacto a {
+    color: #fff;
+    background-color: #2c1a16;
+    padding: 0.5em 1em;
+    text-align: left;
+  }
+
+  .dropdown-content-contacto a:hover {
+    background-color: #502f27;
+  }
+
+  .main-contacto {
+    padding: 50px 320px 50px 320px;
+    background-color: #fff;
+  }
+
+  .contacto-columnas {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .contacto-columna-der {
+    background-image: url(../contactos/img/foto-tienda2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 50%;
+    display: block;
+  }
+
+  .icono-contacto {
+    height: 25px;
+    width: 25px;
+    margin-right: 1rem;
+  }
+
+  .contacto-columnas a {
+    padding: 0;
+  }
+
+  .contacto-iconos {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem 0 1.5rem 1rem;
+  }
+
+  .barra-contacto {
+    width: 50%;
+  }
+
+  .mision-contacto {
+    padding-top: 40px;
+  }
+
+  .mision-contacto strong {
+    font-size: 20px;
+  }
+
+  .contacto-columna-izq p {
+    font-size: 18px;
+  }
+
+  .contacto-columna-izq strong {
+    font-size: 23px;
+  }
+
+  .contacto-banner {
+    background-image: url(../contactos/img/foto-tienda.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+  }
+
+  /* SECCION DISCOGRAFIA */
+  .nav-links-disco {
+    display: flex; /* Mostrar menú siempre visible en desktop */
+    flex-direction: row;
+    width: auto;
+    text-align: initial;
+  }
+
+  .nav-links-disco li {
+    width: auto;
+    padding: 0 1em;
+  }
+
+  .nav-links-disco a {
+    padding: 0.5em 1em;
+  }
+
+  .hamburger-disco {
+    display: none; /* Ocultar hamburguesa en desktop */
+  }
+
+  /* Dropdowns en desktop */
+  .dropdown-content-disco {
+    position: absolute;
+    display: none;
+    background-color: #2c1a16;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 180px;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content-disco {
+    display: block;
+  }
+
+  .dropdown-content-disco a {
+    color: #fff;
+    background-color: #2c1a16;
+    padding: 0.5em 1em;
+    text-align: left;
+  }
+
+  .dropdown-content-disco a:hover {
+    background-color: #502f27;
+  }
+
+  .container-disco {
+    padding-top: 80px;
+    width: 1400px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .info-discografia {
+    float: left;
+    width: 17%;
+    padding: 0;
+  }
+
+  .lista-discos-info {
+    float: left;
+    width: 100%;
+  }
+
+  .ullista-disco {
+    float: left;
+    width: 100%;
+    width: 90%;
+    position: relative;
+    border-top: 1px solid #b5b5b5;
+    padding-top: 15px;
+    margin-top: 15px;
+  }
+
+  .lilista-disco {
+    float: left;
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #6c6c6c;
+    list-style: none;
+  }
+
+  .discos-container {
+    float: left;
+    width: 83%;
+  }
+
+  .articulo-disco {
+    float: left;
+    width: calc(25% - 30px);
+    margin: 0 15px 30px 15px;
+    border-bottom: 1px solid #b5b5b5;
+  }
+
+  .foto-discogra {
+    float: left;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .articulo-info {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .articulo-info p {
+    float: left;
+    width: calc(100% - 50px);
+    padding-right: 10px;
+    color: #000;
+    font-size: 16px;
+    padding-bottom: 20px;
+    line-height: 1.3em;
+  }
+
+  .articulo-info span {
+    float: left;
+    width: 50px;
+    text-align: right;
+    font-size: 16px;
+    color: #6c6c6c;
+    padding-bottom: 20px;
+    line-height: 1.3em;
+  }
+}
